@@ -72,5 +72,9 @@ struct interfazPrincipal
 
     // Notificaciones
     GtkWidget *notificacionLabel;
+
+    // Variables para procesos de C
+    nodoPaciente *primero;
+    nodoPaciente *ultimo;
 };
 typedef struct interfaz inter;
