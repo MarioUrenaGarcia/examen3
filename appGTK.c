@@ -1,10 +1,10 @@
 /**
  *
- * @file Nombre del archivo
- * @brief Breve Descripción
- * @details Descripción extendida
- * @date
- * @author Mario Ureña García
+ * @file appGTK.c
+ * @brief Programa que permite la atención de una fila de personas que se van a vacunar.
+ * @details
+ * @date 09/05/2025
+ * @author Mario Ureña García, Alfredo Emiliano Cisneros Cervantes, Ricardo Ponce de León Vargas
  *
  */
 

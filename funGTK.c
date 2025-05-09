@@ -1,8 +1,8 @@
 /**
- * @file
- * @brief
- * @date
- * @author
+ * @file funGTK.c
+ * @brief Funciones de GTK para la aplicación de vacunación
+ * @date 09/05/2025
+ * @author Mario Ureña García, Alfredo Emiliano Cisneros Cervantes, Ricardo Ponce de León Vargas
  */
 
 #include "defGTK.h"
@@ -11,15 +11,6 @@ void deQueue(nodoPaciente **inicio, nodoPaciente **fin);
 void enQueue(nodoPaciente **inicio, nodoPaciente **fin, char nombre[], char vacuna[]);
 void reporteDeFila(nodoPaciente *aux, char *reporte);
 // Funciones ----------------------------------------------------------------------------
-
-/**
- * @brief
- * @date
- * @author
- * @param
- * @return
- * @Ejemplo
- */
 
 /**
  * @brief Función para cerrar la aplicación.

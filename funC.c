@@ -1,8 +1,8 @@
 /**
- * @file
- * @brief
- * @date
- * @author
+ * @file funC.c
+ * @brief funciones de C para la aplicación de vacunación
+ * @date 09/05/2025
+ * @author Mario Ureña García, Alfredo Emiliano Cisneros Cervantes, Ricardo Ponce de León Vargas
  */
 
 #include "defGTK.h"
