@@ -39,6 +39,14 @@
 #define BG_BLACK "\x1B[40m"
 // Declaración de estructuras -------------------------------------------------------------
 
+// Estructura para almacenar la información de un paciente de una cola FIFO
+struct paciente
+{
+    char nombre[30];
+    char vacuna[30];
+    struct paciente *next;
+};
+typedef struct paciente nodoPaciente;
 struct interfazPrincipal
 {
     // Ventana principal---------------
