@@ -11,6 +11,13 @@
 #include <string.h>
 #include <gtk-2.0/gtk/gtk.h>
 
+// Definiciones -------------------------------------------------------------------------
+#define RESET "\x1b[0m"
+
+#define RED "\x1b[31m"
+#define GREEN "\x1b[32m"
+#define YELLOW "\x1b[33m"
+
 // Declaración de estructuras -------------------------------------------------------------
 
 // Estructura para almacenar la información de un paciente de una cola FIFO

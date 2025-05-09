@@ -2,7 +2,21 @@
  *
  * @file appGTK.c
  * @brief Programa que permite la atención de una fila de personas que se van a vacunar.
- * @details
+ * @details App gráfica que permite dar de alta pacientes a una cola FIFO, por su nombre corto, vacuna
+ *          (influenza, sarampion o covid) y permite atenderlos de la lista (vacunarlos/borrar).
+ *          También debe permitir generar un reporte de cuantos pacientes por vacuna hay en la cola.
+ *          A) Interfaz gráfica: Interfaz en GTK:
+ *             - Una ventana con dos campos de entrada: Nombre y tipo de vacuna.
+ *             - Un botón para agregar pacientes a la cola.
+ *             - Un botón para atender un paciente de la cola (vacunarlo).
+ *             - Un botón para generar un reporte de la fila de pacientes.
+ *             - Label para mostrar el reporte.
+ *          B) Agregar Paciente y Aplicar vacuna: Los respectivos callbacks para cada botón para que,
+ *             con los datos ingresados en los campos de entrada (paciente y vacuna), la app de de alta o baja
+ *             al paciente en la cola FIFO si se oprimen los botones respectivos.
+ *          C) Reportar la cola: Respectivo callback para que, con los datos ingresados en la cola FIFO, calcule
+ *             cuantos pacientes hay en ese momento en la cola para cada vacuna si se oprime el botón. Muestre
+ *             en un label de la app.
  * @date 09/05/2025
  * @author Mario Ureña García, Alfredo Emiliano Cisneros Cervantes, Ricardo Ponce de León Vargas
  *
@@ -24,6 +38,7 @@ int main(int argc, char *argv[])
   // Super struct-------------------------------------------------------------------------
   inter principal;
   // Procesos C --------------------------------------------------------------------------
+  printf(YELLOW "\n\nBienvenido a la aplicación de vacunación\n\n" RESET);
   // Inicializar variables
   principal.inicio = NULL;
   principal.fin = NULL;

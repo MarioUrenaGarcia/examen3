@@ -49,11 +49,13 @@ extern void ingresarPaciente(GtkWidget *button, gpointer llavero)
     // Si el nombre de la vacuna no es influenza, sarampion o covid
     else if (strcmp(vacuna, "influenza") != 0 && strcmp(vacuna, "sarampion") != 0 && strcmp(vacuna, "covid") != 0)
     {
+        printf(RED "Error: Vacuna no válida\n" RESET);
         gtk_label_set_text(GTK_LABEL(pt->notificacionLabel), "Error: Vacuna no válida");
     }
     else
     {
         enQueue(&pt->inicio, &pt->fin, nombre, vacuna);
+        printf(GREEN "Paciente: %s Vacuna: %s Ingresado a cola\n" RESET, nombre, vacuna);
         gtk_label_set_text(GTK_LABEL(pt->notificacionLabel), "Paciente ingresado a la cola");
     }
 
@@ -77,6 +79,7 @@ extern void reportarFila(GtkWidget *button, gpointer llavero)
     char reportePacientes[120];
 
     reporteDeFila(pt->inicio, reportePacientes);
+    printf(YELLOW "Reporte Pacientes: %s\n" RESET, reportePacientes);
     gtk_label_set_text(GTK_LABEL(pt->notificacionLabel), reportePacientes);
 
     return;
@@ -96,12 +99,14 @@ extern void vacunarPaciente(GtkWidget *button, gpointer llavero)
     // Si la cola está vacía
     if (pt->inicio == NULL && pt->fin == NULL)
     {
+        printf(RED "Error: No hay pacientes en la cola\n" RESET);
         gtk_label_set_text(GTK_LABEL(pt->notificacionLabel), "Error: No hay pacientes en la cola");
     }
     // Si la cola no está vacía
     else
     {
         deQueue(&pt->inicio, &pt->fin);
+        printf(GREEN "Paciente vacunado\n" RESET);
         gtk_label_set_text(GTK_LABEL(pt->notificacionLabel), "Paciente vacunado");
     }
 
