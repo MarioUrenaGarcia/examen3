@@ -9,5 +9,5 @@ funGTK.o: funGTK.c defGTK.h
 funC.o: funC.c defGTK.h
 	gcc -c funC.c `pkg-config --cflags gtk+-2.0`
 
-app.o: appGTK.c defGTK.h
+appGTK.o: appGTK.c defGTK.h
 	gcc -c appGTK.c `pkg-config --cflags gtk+-2.0`
