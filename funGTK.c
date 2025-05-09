@@ -20,12 +20,27 @@ void reporteDeFila(nodoPaciente *aux, char *reporte);
  * @return
  * @Ejemplo
  */
+
+/**
+ * @brief Función para cerrar la aplicación.
+ * @param widget Widget que se está utilizando.
+ * @param llavero Puntero a la estructura de la interfaz.
+ * @return void
+ * @details Esta función se llama cuando se cierra la ventana principal de la aplicación.
+ */
 extern void closeTheApp(GtkWidget *widget, gpointer llavero)
 {
     gtk_main_quit();
     return;
 }
 
+/**
+ * @brief Función para ingresar un paciente a la cola.
+ * @param button Botón que se ha presionado.
+ * @param llavero Puntero a la estructura de la interfaz.
+ * @return void
+ * @details Esta función se llama cuando se presiona el botón de ingresar paciente.
+ */
 extern void ingresarPaciente(GtkWidget *button, gpointer llavero)
 {
     inter *pt = (inter *)llavero;
@@ -58,7 +73,14 @@ extern void ingresarPaciente(GtkWidget *button, gpointer llavero)
     return;
 }
 
-extern void reportarFila(GtkWidget *widget, gpointer llavero)
+/**
+ * @brief Función para reportar la fila de pacientes.
+ * @param button Botón que se ha presionado.
+ * @param llavero Puntero a la estructura de la interfaz.
+ * @return void
+ * @details Esta función se llama cuando se presiona el botón de reportar fila.
+ */
+extern void reportarFila(GtkWidget *button, gpointer llavero)
 {
     inter *pt = (inter *)llavero;
     char reportePacientes[120];
@@ -69,7 +91,14 @@ extern void reportarFila(GtkWidget *widget, gpointer llavero)
     return;
 }
 
-extern void vacunarPaciente(GtkWidget *widget, gpointer llavero)
+/**
+ * @brief Función para vacunar a un paciente.
+ * @param button Botón que se ha presionado.
+ * @param llavero Puntero a la estructura de la interfaz.
+ * @return void
+ * @details Esta función se llama cuando se presiona el botón de vacunar paciente.
+ */
+extern void vacunarPaciente(GtkWidget *button, gpointer llavero)
 {
     inter *pt = (inter *)llavero;
 

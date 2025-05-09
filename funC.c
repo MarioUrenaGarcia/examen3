@@ -10,14 +10,13 @@
 // Funciones ----------------------------------------------------------------------------
 
 /**
- * @brief
- * @date
- * @author
- * @param
- * @return
- * @Ejemplo
+ * @brief Añade un nuevo paciente a la cola.
+ * @param inicio Doble puntero al inicio de la cola.
+ * @param fin Doble puntero al final de la cola.
+ * @param nombre Nombre del paciente.
+ * @param vacuna Nombre de la vacuna.
+ * @return void
  */
-
 extern void enQueue(nodoPaciente **inicio, nodoPaciente **fin, char nombre[], char vacuna[])
 {
     nodoPaciente *nuevo;
@@ -45,6 +44,12 @@ extern void enQueue(nodoPaciente **inicio, nodoPaciente **fin, char nombre[], ch
     return;
 }
 
+/**
+ * @brief Elimina el primer paciente de la cola.
+ * @param inicio Doble puntero
+ * @param fin Doble puntero al final de la cola.
+ * @return void
+ */
 extern void deQueue(nodoPaciente **inicio, nodoPaciente **fin)
 {
     nodoPaciente *borra;
@@ -74,7 +79,12 @@ extern void deQueue(nodoPaciente **inicio, nodoPaciente **fin)
     return;
 }
 
-// Devuelve una cadena en forma de Vacunas en cola: # influenza, # sarampion, # covid
+/**
+ * @brief Devuelve una cadena en forma de Vacunas en cola: # influenza, # sarampion, # covid
+ * @param aux Doble puntero al inicio de la cola.
+ * @param reporte Cadena donde se guardará el reporte.
+ * @return void
+ */
 extern void reporteDeFila(nodoPaciente *aux, char *reporte)
 {
     int influenza = 0;
@@ -102,5 +112,3 @@ extern void reporteDeFila(nodoPaciente *aux, char *reporte)
 
     return;
 }
-
-// Función que devuelve un string a través de un puntero haciendo strcpy

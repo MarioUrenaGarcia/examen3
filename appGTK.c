@@ -13,9 +13,9 @@
 // Prototipos de C -----------------------------------------------------------------------
 // Prototipos de GTK ---------------------------------------------------------------------
 void closeTheApp(GtkWidget *widget, gpointer llavero);
-void ingresarPaciente(GtkWidget *buttons, gpointer llavero);
-void reportarFila(GtkWidget *widget, gpointer llavero);
-void vacunarPaciente(GtkWidget *widget, gpointer llavero);
+void ingresarPaciente(GtkWidget *button, gpointer llavero);
+void reportarFila(GtkWidget *button, gpointer llavero);
+void vacunarPaciente(GtkWidget *button, gpointer llavero);
 // Main ----------------------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
