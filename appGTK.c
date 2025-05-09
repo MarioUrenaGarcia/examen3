@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
   gtk_container_add(GTK_CONTAINER(principal.windowHome), principal.mainboxHome);
 
   /* 5. Mostrar los widgets */
-  gtk_widget_show(principal.windowHome);
+  gtk_widget_show_all(principal.windowHome);
   /* 6. El programa se queda en loop */
   gtk_main();
 
