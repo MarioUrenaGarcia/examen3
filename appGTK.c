@@ -15,6 +15,7 @@
 void closeTheApp(GtkWidget *widget, gpointer llavero);
 void ingresarPaciente(GtkWidget *buttons, gpointer llavero);
 void reportarFila(GtkWidget *widget, gpointer llavero);
+void vacunarPaciente(GtkWidget *widget, gpointer llavero);
 // Main ----------------------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
@@ -59,6 +60,7 @@ int main(int argc, char *argv[])
   g_signal_connect(GTK_OBJECT(principal.windowHome), "delete-event", GTK_SIGNAL_FUNC(closeTheApp), &principal);
   g_signal_connect(GTK_OBJECT(principal.ingresarPacienteButton), "clicked", GTK_SIGNAL_FUNC(ingresarPaciente), &principal);
   g_signal_connect(GTK_OBJECT(principal.reportarFilaButton), "clicked", GTK_SIGNAL_FUNC(reportarFila), &principal);
+  g_signal_connect(GTK_OBJECT(principal.vacunarPacienteButton), "clicked", GTK_SIGNAL_FUNC(vacunarPaciente), &principal);
   /* 4. Define jerarquía de instancias (pack the widgets)*/
   // Caja de pacientes
   gtk_box_pack_start_defaults(GTK_BOX(principal.pacienteBox), principal.pacienteLabel);
