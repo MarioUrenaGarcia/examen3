@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
   principal.pacienteBox = gtk_hbox_new(FALSE, 5);
   principal.vacunaBox = gtk_hbox_new(FALSE, 5);
   /*2b. Etiquetas*/
-  principal.pacienteLabel = gtk_label_new("Pacientee:");
+  principal.pacienteLabel = gtk_label_new("Paciente:");
   principal.vacunaLabel = gtk_label_new("Vacuna:");
   principal.notificacionLabel = gtk_label_new("Notificaciones");
   /*2b. Botones*/
