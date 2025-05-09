@@ -1,5 +1,5 @@
 /**
- * @file 
+ * @file
  * @brief
  * @date
  * @author
@@ -38,3 +38,31 @@
 #define BG_GRAY "\x1B[48;2;176;174;174m"
 #define BG_BLACK "\x1B[40m"
 // Declaración de estructuras -------------------------------------------------------------
+
+struct interfazPrincipal
+{
+    // Ventana principal---------------
+    GTtkWidget *windowHome;
+    GtkWidget *mainboxHome;
+
+    // 2 cajas horizontales
+    GtkWidget *pacienteBox;
+    GtkWidget *vacunaBox;
+
+    // Paciente
+    GtkWidget *pacienteLabel;
+    GtkWidget *pacienteEntry;
+
+    // Vacuna
+    GtkWidget *vacunaLabel;
+    GtkWidget *vacunaEntry;
+
+    // Botones
+    GtkWidget *ingresarPacienteButton;
+    GtkWidget *vacunarPacienteButton;
+    GtkWidget *reportarFilaButton;
+
+    // Notificaciones
+    GtkWidget *notificacionLabel;
+};
+typedef struct interfaz inter;
