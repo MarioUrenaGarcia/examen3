@@ -50,7 +50,7 @@ typedef struct paciente nodoPaciente;
 struct interfazPrincipal
 {
     // Ventana principal---------------
-    GTtkWidget *windowHome;
+    GtkWidget *windowHome;
     GtkWidget *mainboxHome;
 
     // 2 cajas horizontales
@@ -70,11 +70,15 @@ struct interfazPrincipal
     GtkWidget *vacunarPacienteButton;
     GtkWidget *reportarFilaButton;
 
+    // Separadores
+    GtkWidget *separator1;
+    GtkWidget *separator2;
+
     // Notificaciones
     GtkWidget *notificacionLabel;
 
     // Variables para procesos de C
-    nodoPaciente *primero;
-    nodoPaciente *ultimo;
+    nodoPaciente *inicio;
+    nodoPaciente *fin;
 };
-typedef struct interfaz inter;
+typedef struct interfazPrincipal inter;

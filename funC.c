@@ -1,11 +1,11 @@
 /**
  * @file
- * @brief 
- * @date 
- * @author 
+ * @brief
+ * @date
+ * @author
  */
 
-#include "defPlantilla.h"
+#include "defGTK.h"
 
 // Funciones ----------------------------------------------------------------------------
 

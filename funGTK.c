@@ -1,11 +1,11 @@
 /**
  * @file
- * @brief 
- * @date 
- * @author 
+ * @brief
+ * @date
+ * @author
  */
 
-#include "defPlantilla.h"
+#include "defGTK.h"
 
 // Funciones ----------------------------------------------------------------------------
 
@@ -17,3 +17,8 @@
  * @return
  * @Ejemplo
  */
+extern void closeTheApp(GtkWidget *widget, gpointer data)
+{
+    gtk_main_quit();
+    return;
+}
