@@ -1,6 +1,6 @@
 #Este es el archivo de makefile para (appGTK.c)
 
-plantilla.exe: appGTK.o funC.o funGTK.o
+appGTK.exe: appGTK.o funC.o funGTK.o
 	gcc appGTK.o funC.o funGTK.o -o appGTK.exe `pkg-config --libs gtk+-2.0`
 
 funGTK.o: funGTK.c defGTK.h
