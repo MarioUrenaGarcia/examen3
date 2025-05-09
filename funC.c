@@ -73,3 +73,34 @@ extern void deQueue(nodoPaciente **inicio, nodoPaciente **fin)
 
     return;
 }
+
+// Devuelve una cadena en forma de Vacunas en cola: # influenza, # sarampion, # covid
+extern void reporteDeFila(nodoPaciente *aux, char *reporte)
+{
+    int influenza = 0;
+    int sarampion = 0;
+    int covid = 0;
+
+    while (aux != NULL)
+    {
+        if (strcmp(aux->vacuna, "influenza") == 0)
+        {
+            influenza++;
+        }
+        else if (strcmp(aux->vacuna, "sarampion") == 0)
+        {
+            sarampion++;
+        }
+        else if (strcmp(aux->vacuna, "covid") == 0)
+        {
+            covid++;
+        }
+        aux = aux->next;
+    }
+
+    sprintf(reporte, "Vacunas en cola: %d influenza, %d sarampion, %d covid", influenza, sarampion, covid);
+
+    return;
+}
+
+// Función que devuelve un string a través de un puntero haciendo strcpy
